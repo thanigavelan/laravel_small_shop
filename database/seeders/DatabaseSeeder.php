@@ -9,6 +9,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 
 use App\Models\Category;
+use App\Models\Brand;
 
 class DatabaseSeeder extends Seeder
 {
@@ -34,6 +35,17 @@ class DatabaseSeeder extends Seeder
         foreach ($categories as $row) 
         {
             Category::create($row);
+        }
+
+        $brands =[
+            ['name' => 'HP'],
+            ['name' => 'Dell'],
+            ['name' => 'Samsung']
+        ];
+        
+        foreach ($brands as $row)
+        {
+            Brand::create($row);
         }
     }
 }
