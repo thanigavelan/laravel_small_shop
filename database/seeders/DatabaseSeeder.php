@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Hash;
 
 use App\Models\Category;
 use App\Models\Brand;
+use App\Models\Product;
 
 class DatabaseSeeder extends Seeder
 {
@@ -46,6 +47,17 @@ class DatabaseSeeder extends Seeder
         foreach ($brands as $row)
         {
             Brand::create($row);
+        }
+
+        $products =[
+            ['name' => 'HP laptop'],
+            ['name' => 'Dell cpu'],
+            ['name' => 'Samsung phone']
+        ];
+        
+        foreach ($products as $row)
+        {
+            Product::create($row);
         }
     }
 }
