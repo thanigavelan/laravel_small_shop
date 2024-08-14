@@ -106,4 +106,19 @@ php artisan make:filament-resource Cart --generate
 ```
 php artisan make:filament-resource OrderItem --generate
 ```
+19. **start server**
+```
+php artisan serve
+```
+
+20. **migrate server**
+```
+php artisan migrate:fresh
+
+php artisan migrate
+```
+21. **db seeder**
+```
+php artisan db:seed
+```
 
