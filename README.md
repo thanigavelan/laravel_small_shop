@@ -122,3 +122,43 @@ php artisan migrate
 php artisan db:seed
 ```
 
+22. **AuthController**
+```
+php artisan make:controller api/v2/AuthController
+```
+
+23. **BrandController**
+```
+php artisan make:controller api/v2/BrandController
+```
+
+24. **CartController**
+```
+php artisan make:controller api/v2/CartController
+```
+
+25. **CategoryController**
+```
+php artisan make:controller api/v2/CategoryController
+```
+
+26. **CityController**
+```
+php artisan make:controller api/v2/CityController
+```
+
+27. **OrderController**
+```
+php artisan make:controller api/v2/OrderController
+```
+
+28. **ProductController**
+```
+php artisan make:controller api/v2/ProductController
+```
+
+29. **ProfileController**
+```
+php artisan make:controller api/v2/ProfileController
+```
+
