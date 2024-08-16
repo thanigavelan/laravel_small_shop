@@ -23,7 +23,16 @@ class CartResource extends Resource
     {
         return $form
             ->schema([
-                //
+                Forms\Components\Select::make('customer_id')
+                    ->relationship('customer', 'name')
+                    ->required(),
+                    Forms\Components\Select::make('products_id')
+                    ->relationship('product', 'name')
+                    ->required(),
+                Forms\Components\TextInput::make('qty')
+                    ->required()
+                    ->numeric()
+                    ->default(1),
             ]);
     }
 
@@ -31,7 +40,23 @@ class CartResource extends Resource
     {
         return $table
             ->columns([
-                //
+                Tables\Columns\TextColumn::make('customer_id')
+                    ->numeric()
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('product_id')
+                    ->numeric()
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('qty')
+                    ->numeric()
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('created_at')
+                    ->dateTime()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+                Tables\Columns\TextColumn::make('updated_at')
+                    ->dateTime()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
                 //
