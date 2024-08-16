@@ -91,7 +91,7 @@ class Order extends Model
 
     public function products(): BelongsToMany
     {
-        return $this->belongsToMany(Product::class, 'order_items');
+        return $this->belongsTo(Product::class);
     }
 
     public function calculaterSGST(): float
