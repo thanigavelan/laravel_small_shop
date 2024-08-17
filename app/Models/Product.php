@@ -21,4 +21,19 @@ class Product extends Model
         'description'
     ];
 
+    
+    public function category(): BelongsTo
+    {
+        return $this->belongsTo(Category::class);
+    }
+
+    public function brand(): BelongsTo
+    {
+        return $this->belongsTo(Brand::class);
+    }
+
+    public function GetImagePath()
+    {
+        return env('DOMAIN_URL') . Storage::url($this->image_path);
+    }
 }
